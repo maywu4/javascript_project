@@ -30,73 +30,109 @@ function calcValueSP500(input, time) {
 
 function calcValueStocks(input, time) {
     const oneFifthValue = input/5
-    const oneYearGrowthEstimates = {'GOOGL': .1560, 'TSLA': .42, 'MSFT': .18, 'APPL': 0.056, 'META': .113} //Source: Yahoo Finance Analysis Estimates 
-    const twoToFiveYearGrowthEstimates = {'GOOGL': .1365, 'TSLA': .5228, 'MSFT': .1541, 'APPL': 0.948, 'META': .0490}  //Source: Yahoo Finance Analysis Estimates 
-    const FiveYearPlusGrowthEstimates = {'GOOGL': .3020, 'TSLA': .8277, 'MSFT': .2454, 'APPL': 0.2352, 'META': .1728}  //Source: Yahoo Finance Analysis Estimates 
+    const oneYearGrowthEstimates = {'GOOGL': .1560, 'KO': .057, 'MSFT': .18, 'APPL': 0.056, 'META': .113} //Source: Yahoo Finance Analysis Estimates 
+    const twoToFiveYearGrowthEstimates = {'GOOGL': .1365, 'KO': .055, 'MSFT': .1541, 'APPL': 0.0948, 'META': .0490}  //Source: Yahoo Finance Analysis Estimates 
+    const fiveYearPlusGrowthEstimates = {'GOOGL': .3020, 'KO': .0453, 'MSFT': .2454, 'APPL': 0.2352, 'META': .1728}  //Source: Yahoo Finance Analysis Estimates 
     let gTotal = 0;
     let gTotalArray = [];
-    let tTotal = 0;
-    let tTotalArray = [];
+    let cTotal = 0;
+    let cTotalArray = [];
     let mftTotal = 0;
     let mftTotalArray = [];
     let aTotal = 0;
     let aTotalArray = [];
     let mtaTotal = 0; 
     let mtaTotalArray = [];
-    let total = 0 //gTotal + tTotal + mftTotal + aTotal + mtaTotal;
+    // let total = 0 //gTotal + cTotal + mftTotal + aTotal + mtaTotal;
 
 
-    // if (time <= 1) {
-        for (let i = 0; i < 5; i++) {
+ 
+    for (let i = 0; i < 5; i++) {
 
-            let rate = Object.values(oneYearGrowthEstimates)[i];
-            let yr2Rate = Object.values(twoToFiveYearGrowthEstimates)[i];
-            let yr6Rate = Object.values(FiveYearPlusGrowthEstimates)[i];
-            switch (i) {
-                case 0:
-                    
-                    for (let y = 0; y < 20; y++ ) {
-                        if (y < 1) {
-                            gTotal = oneFifthValue*(1+rate);
-                            gTotalArray.push(gTotal)
-                        } else if (y>0 && y < 5) {
-                            gTotal = gTotal*(1+yr2Rate);
-                            gTotalArray.push(gTotal)
-                        } else {
-                            gTotal = gTotal*(1+yr6Rate);
-                            gTotalArray.push(gTotal)
-                        }
+        let rate = Object.values(oneYearGrowthEstimates)[i];
+        let yr2Rate = Object.values(twoToFiveYearGrowthEstimates)[i];
+        let yr6Rate = Object.values(fiveYearPlusGrowthEstimates)[i];
+        switch (i) {
+            case 0:
+                
+                for (let y = 1; y <= 20; y++ ) {
+                    if (y < 2) {
+                        gTotal = oneFifthValue*(1+rate);
+                        gTotalArray.push(Math.round(gTotal*100)/100)
+                    } else if (y>1 && y < 6) {
+                        gTotal = gTotal*(1+yr2Rate);
+                        gTotalArray.push(Math.round(gTotal*100)/100)
+                    } else {
+                        gTotal = gTotal*(1+yr6Rate);
+                        gTotalArray.push(Math.round(gTotal*100)/100)
                     }
-                    // gTotal += oneFifthValue*(1+rate);
-                    return gTotalArray;
-                    break;
-            //     case 1:
-            //         tTotal += oneFifthValue*(1+rate);
-            //         break;
-            //     case 2:
-            //         mftTotal += oneFifthValue*(1+rate);
-            //         break;
-            //     case 3:
-            //         aTotal += oneFifthValue*(1+rate);
-            //         break;
-            //     case 4:
-            //         mtaTotal += oneFifthValue*(1+rate);
-            //         break;
-            }
-            // total += (oneFifthValue * (1+rate))
+                }
+
+                //return gTotalArray;
+                break;
+
+            case 1:
+                for (let y = 1; y <= 20; y++ ) {
+                    if (y < 2) {
+                        cTotal = oneFifthValue*(1+rate);
+                        cTotalArray.push(Math.round(cTotal*100)/100)
+                    } else if (y>1 && y < 6) {
+                        cTotal = cTotal*(1+yr2Rate);
+                        cTotalArray.push(Math.round(cTotal*100)/100)
+                    } else {
+                        cTotal = cTotal*(1+yr6Rate);
+                        cTotalArray.push(Math.round(cTotal*100)/100)
+                    }
+                }
+                break;
+            case 2:
+                for (let y = 1; y <= 20; y++ ) {
+                    if (y < 2) {
+                        mftTotal = oneFifthValue*(1+rate);
+                        mftTotalArray.push(Math.round(mftTotal*100)/100)
+                    } else if (y>1 && y < 6) {
+                        mftTotal = mftTotal*(1+yr2Rate);
+                        mftTotalArray.push(Math.round(mftTotal*100)/100)
+                    } else {
+                        mftTotal = mftTotal*(1+yr6Rate);
+                        mftTotalArray.push(Math.round(mftTotal*100)/100)
+                    }
+                }
+                break;
+            case 3:
+                for (let y = 1; y <= 20; y++ ) {
+                    if (y < 2) {
+                        aTotal = oneFifthValue*(1+rate);
+                        aTotalArray.push(Math.round(aTotal*100)/100)
+                    } else if (y>1 && y < 6) {
+                        aTotal = aTotal*(1+yr2Rate);
+                        aTotalArray.push(Math.round(aTotal*100)/100)
+                    } else {
+                        aTotal = aTotal*(1+yr6Rate);
+                        aTotalArray.push(Math.round(aTotal*100)/100)
+                    }
+                }
+                break;
+            case 4:
+                for (let y = 1; y <= 20; y++ ) {
+                    if (y < 2) {
+                        mtaTotal = oneFifthValue*(1+rate);
+                        mtaTotalArray.push(Math.round(mtaTotal*100)/100)
+                    } else if (y>1 && y < 6) {
+                        mtaTotal = mtaTotal*(1+yr2Rate);
+                        mtaTotalArray.push(Math.round(mtaTotal*100)/100)
+                    } else {
+                        mtaTotal = mtaTotal*(1+yr6Rate);
+                        mtaTotalArray.push(Math.round(mtaTotal*100)/100)
+                    }
+                }
+                break;
         }
-    // }
-    // return total
+
+    }
+    // return [gTotalArray, cTotalArray, mftTotalArray, aTotalArray, mtaTotalArray]
+
+    let total = gTotalArray[time - 1] + cTotalArray[time - 1] + mftTotalArray[time - 1] + aTotalArray[time - 1] + mtaTotalArray[time - 1];
+    return Math.round(total*100)/100;
+
 };
-// individual stock calcs
-
-// } else if (1 < time <= 5) {
-//     // loop to calculate year 1 total
-//     for (let i = 0; i < 5; i++) {
-//         let yrOneRate = Object.values(oneYearGrowthEstimates)[i]
-//         total += oneFifthValue*(1+yrOneRate)
-//     }
-//     // loop to calculate year 2+ total, new growth rates
-
-
-// }
