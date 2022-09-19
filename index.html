@@ -6,17 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
     <script src="./dist/main.js"></script>
-    <title>To Save or Not to Save</title>
+    <title>Spend vs Invest</title>
+    <link rel="icon" type="image/png" href="./icons8-banknotes-16.png">
   </head>
 
   <body>
-        <h1>To Save or Not to Save</h1>
-        <div id="root">
-        <canvas id="lineChart" width="400" height="400"></canvas>
+        <h1>Spend vs Invest</h1>
+        <a href="https://github.com/maywu4">Github</a>
+        <a href="https://www.linkedin.com/in/maywu4">LinkedIn</a>
+        <div id="instructions">
+            <ol> How to Use:
+                <li> Enter an amount. </li>
+                <li> Refer to the line graph for growth per type of investment. </li>
+                <li> Select data points for details. </li>
+                <li> Refer to resources below for additional info on the different investment types. </li>
+            </ol>
         </div>
 
-  </body>
+        <div id="input"> Enter an Amount:
+            <label>
+                <input id="userinput" type="text">
+            </label>
+        </div> -->
+        
+        <div id ="root">
+            <h2> Growth by Investments Line Graph</h2>
+            <canvas id="lineChart" width="40" height="40"></canvas>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        </div>
+
+        <div id="resources"> Investment Resources:
+            <ul>
+                <li><a href="https://www.nerdwallet.com/article/banking/cd-certificate-of-deposit">Learn more about CDs(Certificate of Deposits)</a></li>
+                <li><a href="https://www.treasurydirect.gov/indiv/products/prod_tbonds_glance.htm">Learn more about U.S. Treasury Bonds</a></li>
+                <li><a href="https://www.forbes.com/advisor/investing/best-sp-500-etfs/">Learn more about S&P 500 ETFs</a></li>
+                <li><a href="https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks">Learn more about investing in stocks</a></li>
+            </ul>
+        </div>
+        
+    </body>
 
 </html>

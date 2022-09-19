@@ -1,39 +1,39 @@
-import { at } from "core-js/core/string";
+// import { at } from "core-js/core/string";
 
-function calcValueDueToInflation(input, time) {
+export const calcValueDueToInflation= function (input, time) {
     //source for avg annual inflation rate: https://www.worlddata.info/america/usa/inflation-rates.php
     let output = (input)*(1+(-0.0380/1))**(1*time);
     return Math.round(output*100)/100;
 }
 
 
-function calcValueInSavings(input, time) {
+export const calcValueInSavings = function(input, time) {
     //source for avg savings account interest rate: https://smartasset.com/checking-account/average-savings-account-interest
     let output = (input)*(1+(.0013/1))**(1*time);
     return Math.round(output*100)/100;
 }
 
 
-function calcValueCd(input, time) {
+export const calcValueCd = function (input, time) {
     //source for avg one-year CD APY: https://www.bankrate.com/banking/cds/historical-cd-interest-rates/
     let output = (input)*(1+(.0052/1))**(1*time);
     return Math.round(output*100)/100;
 }
 
 
-function calcValueTreasuryBond(input, time) {
+export const calcValueTreasuryBond = function (input, time) {
     //source for 20yr U.S. Treasury Bonds interest rate: https://www.treasurydirect.gov/instit/annceresult/annceresult.htm 
     let output = (input)*(1+(.03375/1))**(1*time);
     return Math.round(output*100)/100;
 }
 
-function calcValueSP500(input, time) {
+export const calcValueSP500 = function (input, time) {
     //source for S&P 500 annual growth rate: https://www.fool.com/investing/how-to-invest/index-funds/average-return/
     let output = (input)*(1+(.1070/1))**(1*time);
     return Math.round(output*100)/100;
 }
 
-function calcValueStocks(input, time) {
+export const calcValueStocks = function (input, time) {
     // GOOGL growth rates: https://finance.yahoo.com/quote/GOOGL/analysis?p=GOOGL
     // OK growth rates: https://finance.yahoo.com/quote/KO/analysis?p=KO
     // MSFT growth rates: https://finance.yahoo.com/quote/MSFT/analysis?p=MSFT
@@ -147,3 +147,5 @@ function calcValueStocks(input, time) {
     return Math.round(total*100)/100;
 
 };
+
+// export {calcValueDueToInflation, calcValueInSavings, calcValueCd, calcValueTreasuryBond, calcValueSP500, calcValueStocks}
