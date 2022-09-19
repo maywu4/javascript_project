@@ -142,8 +142,8 @@ function calcValueStocks(input, time) {
 
     }
     // return [gTotalArray, cTotalArray, mftTotalArray, aTotalArray, mtaTotalArray]
-
-    let total = gTotalArray[time - 1] + cTotalArray[time - 1] + mftTotalArray[time - 1] + aTotalArray[time - 1] + mtaTotalArray[time - 1];
+    const lastIdx = time-1;
+    let total = gTotalArray[lastIdx] + cTotalArray[lastIdx] + mftTotalArray[lastIdx] + aTotalArray[lastIdx] + mtaTotalArray[lastIdx];
     return Math.round(total*100)/100;
 
 };
