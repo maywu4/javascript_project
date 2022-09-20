@@ -148,4 +148,3 @@ export const calcValueStocks = function (input, time) {
 
 };
 
-// export {calcValueDueToInflation, calcValueInSavings, calcValueCd, calcValueTreasuryBond, calcValueSP500, calcValueStocks}
