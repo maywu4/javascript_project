@@ -10,10 +10,3 @@ document.addEventListener('DOMContentLoaded', () => {
     );
 })
 
-const actions = [{
-    name: 'Position: right',
-    handler(lineChart) {
-      lineChart.options.plugins.legend.position = 'right';
-      lineChart.update();
-    }
-}];

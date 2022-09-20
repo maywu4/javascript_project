@@ -1,15 +1,29 @@
 import * as Calculations from './calculations.js';
-// console.log(Calc.calcValueStocks)
-// debugger
-// // import { calcValueDueToInflation, calcValueInSavings, calcValueCd, calcValueTreasuryBond, calcValueSP500, calcValueStocks } from './calculations';
-// import Chart from 'chart.js/auto';
-// // const Calculations = require('./calculations');
-// // const Calculations = requrire('')
+
 
 //source: https://www.chartjs.org/docs/latest/getting-started/
+let userInput = 0  //updateUserInput();
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const input = document.getElementById('userInput');
+    console.log(input)
+    
+    const updateUserInput = function(ev) {
+        ev.preventDefault();
+        userInput = document.getElementById('userInput').value
+        console.log(userInput);
+        return false;
+    }
+    input.addEventListener("submit", function(e) {
+        e.preventDefault();
+        userInput = document.getElementById('userInput').value
+        console.log(userInput);
+    })
+})
 
 
-let userInput = 100; //document.getElementById('userInput').value - save the user inputted amount to a variable
+
+
 
 const labels = [
     'Now',
