@@ -116,6 +116,11 @@ options: {
     scales: {
       x: {
         display: true,
+        ticks: {
+            font: {
+                size: 18
+            }
+        },
         title: {
           display: true,
           text: 'Time',
@@ -129,21 +134,31 @@ options: {
       },
       y: {
         display: true,
+          ticks: {
+              font: {
+                  size: 18
+              }
+          },
         title: {
           display: true,
           text: 'Value',
             color: '#023020',
           font: {
-            lineHeight: 2.0,
+            // lineHeight: 2.0,
             family: 'Times New Roman',
             size: 32
           }
         }
       }
-    }, 
+    },
     plugins: {
         legend: {
-            position: 'right'
+            position: 'right',
+            labels: {
+                font: {
+                    size: 15
+                }
+            }
         },
         title: {
             display: true,
