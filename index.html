@@ -6,44 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
-    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
-    <title>Spend vs Invest</title>
+    <!-- <link rel="stylesheet" href="index.scss" /> -->
+    <title>Monetary Gain on the Brain</title>
     <link rel="icon" type="image/png" href="./icons8-banknotes-16.png">
 </head>
 
 <body>
-    <h1>Spend vs Invest</h1>
-    <a href="https://github.com/maywu4">Github</a>
-    <a href="https://www.linkedin.com/in/maywu4">LinkedIn</a>
-    <div id="instructions">
-        <ol> How to Use:
-            <li> Enter an amount. </li>
-            <li> Refer to the line graph for growth per type of investment. </li>
-            <li> Click on a specific investment type in the legend to the right of the graph to un-select. </li>
-            <li> Hover over data points for details. </li>
-            <li> Refer to resources below for additional info on the different investment types. </li>
-        </ol>
-    </div>
-    
-    <form id="input"> Enter an Amount:
-        <label>
-            <input id="inputAmount" name="userInput[value]" type="text" >
-            <input type="submit" value="submit">
-        </label>
-    </form>
-    
-    <div id ="root">
-        <canvas id="lineChart" width="10" height="10"></canvas>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    </div>
-    
-    <div id="resources"> Investment Resources:
-        <ul>
-            <li><a href="https://www.nerdwallet.com/article/banking/cd-certificate-of-deposit">Learn more about CDs(Certificate of Deposits)</a></li>
-            <li><a href="https://www.treasurydirect.gov/indiv/products/prod_tbonds_glance.htm">Learn more about U.S. Treasury Bonds</a></li>
-            <li><a href="https://www.forbes.com/advisor/investing/best-sp-500-etfs/">Learn more about S&P 500 ETFs</a></li>
-            <li><a href="https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks">Learn more about investing in stocks</a></li>
-        </ul>
+    <header id="heading">
+        <h1>Monetary Gain on the Brain</h1>
+        <nav id="navbar">
+            <ul class="links">
+                <li><a href="https://github.com/maywu4">
+                    <img src="./icons8-github-480.png" alt="github-logo" width="60px" hieght="60px">
+                </a></li>
+                <li><a href="https://www.linkedin.com/in/maywu4">
+                    <img src="./icons8-linkedin-512.png" alt="linkedIn-logo" width="60px" hieght="60px">
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div id="steps">
+            <h3>How to Use:</h3>
+            <ol id="instructions"> 
+                <li> Enter an amount below. </li>
+                <li> Refer to the line graph for growth per type of investment. </li>
+                <li> Click on a specific investment type in the legend to the right of the graph to un-select. </li>
+                <li> Hover over data points for details. </li>
+                <li> Refer to resources below for additional info on the different investment types. </li>
+            </ol>
+        </div>
+        <br>
+        <br>
+        <div id="userForm">  
+            <div id="amount">
+                <form id="input"> 
+                    <h3>Enter an Amount:</h3>
+                    <label>
+                        <input id="inputAmount" name="userInput[value]" type="text" >
+                        <input type="submit" value="submit">
+                    </label>
+                </form>
+            </div>
+        </div>
+        
+        <div id ="root">
+            <canvas id="lineChart" width="500" height="300"></canvas>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        </div>
+
+        <div id="stockimg">
+            <!-- <iframe src="https://giphy.com/embed/JtBZm3Getg3dqxK0zP" width="446" height="240" frameBorder="0" class="giphy-embed"
+                allowFullScreen><a href="https://giphy.com/gifs/JtBZm3Getg3dqxK0zP">via GIPHY</a></iframe> -->
+            <img id="stockphoto" src="./photo-1614028674026-a65e31bfd27c.avif" width="446" height="240px" alt="stock-photo">
+        </div>
+
+        <div id="giphy3">
+            <iframe src="https://giphy.com/embed/ADgfsbHcS62Jy" width="446" height="240" frameBorder="0" class="giphy-embed"
+                allowFullScreen><a href="https://giphy.com/gifs/money-atm-ADgfsbHcS62Jy">via GIPHY</a></iframe>
+            <p></p>
+        </div>
+
+        <div id="resources"> 
+            <h3>Investment Resources</h3>
+            <ul id="resourceslist">
+                <li><a href="https://www.nerdwallet.com/article/banking/cd-certificate-of-deposit">Learn more about CDs(Certificate of Deposits)</a></li>
+                <li><a href="https://www.treasurydirect.gov/indiv/products/prod_tbonds_glance.htm">Learn more about U.S. Treasury Bonds</a></li>
+                <li><a href="https://www.forbes.com/advisor/investing/best-sp-500-etfs/">Learn more about S&P 500 ETFs</a></li>
+                <li><a href="https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks">Learn more about investing in stocks</a></li>
+            </ul>
+        </div>
+        <div id="apps">
+            <h3>Start Investing!</h3>
+            <ul id="appslist">
+                <li><a href="https://www.tdameritrade.com/"> TD Ameritrade </a></li>
+                <li><a href="https://www.fidelity.com/"> Fidelity Investments </a></li>
+                <li><a href="https://investor.vanguard.com/corporate-portal/"> Vanguard </a></li>
+                <li><a href="https://robinhood.com/us/en/"> Robinhood </a></li>
+            </ul>
+        </div>
     </div>
     
     <script src="./dist/main.js"></script>

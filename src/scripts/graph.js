@@ -16,14 +16,14 @@ let userInput = 0
         lineChart.data.datasets = [
             {
                 label: 'Inflation',
-                backgroundColor: '#b4cd93',
-                borderColor: '#b4cd93',
+                backgroundColor: 'red',
+                borderColor: 'red',
                 data: [Math.floor(userInput), Calculations.calcValueDueToInflation(userInput, 1), Calculations.calcValueDueToInflation(userInput, 3), Calculations.calcValueDueToInflation(userInput, 5), Calculations.calcValueDueToInflation(userInput, 10), Calculations.calcValueDueToInflation(userInput, 20)],
             },
             {
                 label: 'Savings Account',
-                backgroundColor: '#a7d7c5',
-                borderColor: '#a7d7c5',
+                backgroundColor: '#b4cd93',
+                borderColor: '#b4cd93',
                 data: [Math.floor(userInput), Calculations.calcValueInSavings(userInput, 1), Calculations.calcValueInSavings(userInput, 3), Calculations.calcValueInSavings(userInput, 5), Calculations.calcValueInSavings(userInput, 10), Calculations.calcValueInSavings(userInput, 20)],
             },
             {
@@ -45,7 +45,7 @@ let userInput = 0
                 data: [Math.floor(userInput), Calculations.calcValueSP500(userInput, 1), Calculations.calcValueSP500(userInput, 3), Calculations.calcValueSP500(userInput, 5), Calculations.calcValueSP500(userInput, 10), Calculations.calcValueSP500(userInput, 20)],
             },
             {
-                label: 'Stocks(GOOGL, KO, MFST, APPL, META)',
+                label: 'Stocks(GOOGL, KO, MSFT, APPL, and META)',
                 backgroundColor: '#118C4F',
                 borderColor: '#118C4F',
                 data: [Math.floor(userInput), Calculations.calcValueStocks(userInput, 1), Calculations.calcValueStocks(userInput, 3), Calculations.calcValueStocks(userInput, 5), Calculations.calcValueStocks(userInput, 10), Calculations.calcValueStocks(userInput, 20)],
@@ -70,14 +70,14 @@ const data = {
     datasets: [
         {
             label: 'Inflation',
-            backgroundColor: '#b4cd93',
-            borderColor: '#b4cd93',
+            backgroundColor: 'red',
+            borderColor: 'red',
             data: [Math.floor(userInput), Calculations.calcValueDueToInflation(userInput, 1), Calculations.calcValueDueToInflation(userInput, 3), Calculations.calcValueDueToInflation(userInput, 5), Calculations.calcValueDueToInflation(userInput, 10), Calculations.calcValueDueToInflation(userInput, 20)],  
         }, 
         {
             label: 'Savings Account',
-            backgroundColor: '#a7d7c5',
-            borderColor: '#a7d7c5',
+            backgroundColor: '#b4cd93',
+            borderColor: '#b4cd93',
             data: [Math.floor(userInput), Calculations.calcValueInSavings(userInput, 1), Calculations.calcValueInSavings(userInput, 3), Calculations.calcValueInSavings(userInput, 5), Calculations.calcValueInSavings(userInput, 10), Calculations.calcValueInSavings(userInput, 20)],
         },
         {
@@ -99,7 +99,7 @@ const data = {
             data: [Math.floor(userInput), Calculations.calcValueSP500(userInput, 1), Calculations.calcValueSP500(userInput, 3), Calculations.calcValueSP500(userInput, 5), Calculations.calcValueSP500(userInput, 10), Calculations.calcValueSP500(userInput, 20)],
         },
         {
-            label: 'Stocks(GOOGL, KO, MFST, APPL, META)',
+            label: 'Stocks(GOOGL, KO, MSFT, APPL, and META)',
             backgroundColor: '#118C4F',
             borderColor: '#118C4F',
             data: [Math.floor(userInput), Calculations.calcValueStocks(userInput, 1), Calculations.calcValueStocks(userInput, 3), Calculations.calcValueStocks(userInput, 5), Calculations.calcValueStocks(userInput, 10), Calculations.calcValueStocks(userInput, 20)],
@@ -112,17 +112,18 @@ type: 'line',
 data: data,
 options: {
     responsive: true,
+    maintainAspectRatio: false,
     scales: {
       x: {
         display: true,
         title: {
           display: true,
           text: 'Time',
-          color: '#505050',
+            color: '#023020',
           font: {
             lineHeight: 2.0,
             family: 'Times New Roman',
-            size: 24
+            size: 32
           }
         }
       },
@@ -131,11 +132,11 @@ options: {
         title: {
           display: true,
           text: 'Value',
-          color: '#505050',
+            color: '#023020',
           font: {
             lineHeight: 2.0,
             family: 'Times New Roman',
-            size: 24
+            size: 32
           }
         }
       }
@@ -146,12 +147,12 @@ options: {
         },
         title: {
             display: true,
-            text: 'Growth by Investments Line Graph',
-            color: '#505050',
+            text: 'Growth by Investments',
+            color: '#023020',
             font: {
                 lineHeight: 2.0,
                 family: 'Times New Roman',
-                size: 36
+                size: 40
               }
         }
     }, 
