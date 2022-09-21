@@ -18,37 +18,37 @@ let userInput = 0
                 label: 'Inflation',
                 backgroundColor: 'red',
                 borderColor: 'red',
-                data: [Math.floor(userInput), Calculations.calcValueDueToInflation(userInput, 1), Calculations.calcValueDueToInflation(userInput, 3), Calculations.calcValueDueToInflation(userInput, 5), Calculations.calcValueDueToInflation(userInput, 10), Calculations.calcValueDueToInflation(userInput, 20)],
+                data: [Math.floor(userInput), Calculations.calcValueDueToInflation(userInput, 1), Calculations.calcValueDueToInflation(userInput, 3), Calculations.calcValueDueToInflation(userInput, 5), Calculations.calcValueDueToInflation(userInput, 10), Calculations.calcValueDueToInflation(userInput, 15), Calculations.calcValueDueToInflation(userInput, 20)],
             },
             {
                 label: 'Savings Account',
                 backgroundColor: '#b4cd93',
                 borderColor: '#b4cd93',
-                data: [Math.floor(userInput), Calculations.calcValueInSavings(userInput, 1), Calculations.calcValueInSavings(userInput, 3), Calculations.calcValueInSavings(userInput, 5), Calculations.calcValueInSavings(userInput, 10), Calculations.calcValueInSavings(userInput, 20)],
+                data: [Math.floor(userInput), Calculations.calcValueInSavings(userInput, 1), Calculations.calcValueInSavings(userInput, 3), Calculations.calcValueInSavings(userInput, 5), Calculations.calcValueInSavings(userInput, 10), Calculations.calcValueInSavings(userInput, 15), Calculations.calcValueInSavings(userInput, 20)],
             },
             {
                 label: 'CDs(Certificates of Deposit)',
                 backgroundColor: '#74b49b',
                 borderColor: '#74b49b',
-                data: [Math.floor(userInput), Calculations.calcValueCd(userInput, 1), Calculations.calcValueCd(userInput, 3), Calculations.calcValueCd(userInput, 5), Calculations.calcValueCd(userInput, 10), Calculations.calcValueCd(userInput, 20)],
+                data: [Math.floor(userInput), Calculations.calcValueCd(userInput, 1), Calculations.calcValueCd(userInput, 3), Calculations.calcValueCd(userInput, 5), Calculations.calcValueCd(userInput, 10), Calculations.calcValueCd(userInput, 15), Calculations.calcValueCd(userInput, 20)],
             },
             {
                 label: 'U.S. Treasury Bonds',
                 backgroundColor: '#5c8d89',
                 borderColor: '#5c8d89',
-                data: [Math.floor(userInput), Calculations.calcValueTreasuryBond(userInput, 1), Calculations.calcValueTreasuryBond(userInput, 3), Calculations.calcValueTreasuryBond(userInput, 5), Calculations.calcValueTreasuryBond(userInput, 10), Calculations.calcValueTreasuryBond(userInput, 20)],
+                data: [Math.floor(userInput), Calculations.calcValueTreasuryBond(userInput, 1), Calculations.calcValueTreasuryBond(userInput, 3), Calculations.calcValueTreasuryBond(userInput, 5), Calculations.calcValueTreasuryBond(userInput, 10), Calculations.calcValueTreasuryBond(userInput, 15), Calculations.calcValueTreasuryBond(userInput, 20)],
             },
             {
                 label: 'S&P 500 ETFs',
                 backgroundColor: '#427a5b',
                 borderColor: '#427a5b',
-                data: [Math.floor(userInput), Calculations.calcValueSP500(userInput, 1), Calculations.calcValueSP500(userInput, 3), Calculations.calcValueSP500(userInput, 5), Calculations.calcValueSP500(userInput, 10), Calculations.calcValueSP500(userInput, 20)],
+                data: [Math.floor(userInput), Calculations.calcValueSP500(userInput, 1), Calculations.calcValueSP500(userInput, 3), Calculations.calcValueSP500(userInput, 5), Calculations.calcValueSP500(userInput, 10), Calculations.calcValueSP500(userInput, 15), Calculations.calcValueSP500(userInput, 20)],
             },
             {
                 label: 'Stocks(GOOGL, KO, MSFT, APPL, and META)',
                 backgroundColor: '#118C4F',
                 borderColor: '#118C4F',
-                data: [Math.floor(userInput), Calculations.calcValueStocks(userInput, 1), Calculations.calcValueStocks(userInput, 3), Calculations.calcValueStocks(userInput, 5), Calculations.calcValueStocks(userInput, 10), Calculations.calcValueStocks(userInput, 20)],
+                data: [Math.floor(userInput), Calculations.calcValueStocks(userInput, 1), Calculations.calcValueStocks(userInput, 3), Calculations.calcValueStocks(userInput, 5), Calculations.calcValueStocks(userInput, 10), Calculations.calcValueStocks(userInput, 15), Calculations.calcValueStocks(userInput, 20)],
             }
         ]
         lineChart.update();
@@ -57,12 +57,13 @@ let userInput = 0
 
 
 const labels = [
-    'Now',
-    '1 year',
-    '3 years',
-    '5 years',
-    '10 years',
-    '20 years',
+    '0',
+    '1',
+    '3',
+    '5',
+    '10',
+    '15',
+    '20',
   ];
 
 const data = {
@@ -72,37 +73,37 @@ const data = {
             label: 'Inflation',
             backgroundColor: 'red',
             borderColor: 'red',
-            data: [Math.floor(userInput), Calculations.calcValueDueToInflation(userInput, 1), Calculations.calcValueDueToInflation(userInput, 3), Calculations.calcValueDueToInflation(userInput, 5), Calculations.calcValueDueToInflation(userInput, 10), Calculations.calcValueDueToInflation(userInput, 20)],  
+            data: [Math.floor(userInput), Calculations.calcValueDueToInflation(userInput, 1), Calculations.calcValueDueToInflation(userInput, 3), Calculations.calcValueDueToInflation(userInput, 5), Calculations.calcValueDueToInflation(userInput, 10), Calculations.calcValueDueToInflation(userInput, 15), Calculations.calcValueDueToInflation(userInput, 20)],  
         }, 
         {
             label: 'Savings Account',
             backgroundColor: '#b4cd93',
             borderColor: '#b4cd93',
-            data: [Math.floor(userInput), Calculations.calcValueInSavings(userInput, 1), Calculations.calcValueInSavings(userInput, 3), Calculations.calcValueInSavings(userInput, 5), Calculations.calcValueInSavings(userInput, 10), Calculations.calcValueInSavings(userInput, 20)],
+            data: [Math.floor(userInput), Calculations.calcValueInSavings(userInput, 1), Calculations.calcValueInSavings(userInput, 3), Calculations.calcValueInSavings(userInput, 5), Calculations.calcValueInSavings(userInput, 10), Calculations.calcValueInSavings(userInput, 15),Calculations.calcValueInSavings(userInput, 20)],
         },
         {
             label: 'CDs(Certificates of Deposit)',
             backgroundColor: '#74b49b',
             borderColor: '#74b49b',
-            data: [Math.floor(userInput), Calculations.calcValueCd(userInput, 1), Calculations.calcValueCd(userInput, 3), Calculations.calcValueCd(userInput, 5), Calculations.calcValueCd(userInput, 10), Calculations.calcValueCd(userInput, 20)],
+            data: [Math.floor(userInput), Calculations.calcValueCd(userInput, 1), Calculations.calcValueCd(userInput, 3), Calculations.calcValueCd(userInput, 5), Calculations.calcValueCd(userInput, 10), Calculations.calcValueCd(userInput, 15), Calculations.calcValueCd(userInput, 20)],
         },
         {
             label: 'U.S. Treasury Bonds',
             backgroundColor: '#5c8d89',
             borderColor: '#5c8d89',
-            data: [Math.floor(userInput), Calculations.calcValueTreasuryBond(userInput, 1), Calculations.calcValueTreasuryBond(userInput, 3), Calculations.calcValueTreasuryBond(userInput, 5), Calculations.calcValueTreasuryBond(userInput, 10), Calculations.calcValueTreasuryBond(userInput, 20)],
+            data: [Math.floor(userInput), Calculations.calcValueTreasuryBond(userInput, 1), Calculations.calcValueTreasuryBond(userInput, 3), Calculations.calcValueTreasuryBond(userInput, 5), Calculations.calcValueTreasuryBond(userInput, 10), Calculations.calcValueTreasuryBond(userInput, 15),Calculations.calcValueTreasuryBond(userInput, 20)],
         },
         {
             label: 'S&P 500 ETFs',
             backgroundColor: '#427a5b',
             borderColor: '#427a5b',
-            data: [Math.floor(userInput), Calculations.calcValueSP500(userInput, 1), Calculations.calcValueSP500(userInput, 3), Calculations.calcValueSP500(userInput, 5), Calculations.calcValueSP500(userInput, 10), Calculations.calcValueSP500(userInput, 20)],
+            data: [Math.floor(userInput), Calculations.calcValueSP500(userInput, 1), Calculations.calcValueSP500(userInput, 3), Calculations.calcValueSP500(userInput, 5), Calculations.calcValueSP500(userInput, 10), Calculations.calcValueSP500(userInput, 15), Calculations.calcValueSP500(userInput, 20)],
         },
         {
             label: 'Stocks(GOOGL, KO, MSFT, APPL, and META)',
             backgroundColor: '#118C4F',
             borderColor: '#118C4F',
-            data: [Math.floor(userInput), Calculations.calcValueStocks(userInput, 1), Calculations.calcValueStocks(userInput, 3), Calculations.calcValueStocks(userInput, 5), Calculations.calcValueStocks(userInput, 10), Calculations.calcValueStocks(userInput, 20)],
+            data: [Math.floor(userInput), Calculations.calcValueStocks(userInput, 1), Calculations.calcValueStocks(userInput, 3), Calculations.calcValueStocks(userInput, 5), Calculations.calcValueStocks(userInput, 10), Calculations.calcValueStocks(userInput, 15),Calculations.calcValueStocks(userInput, 20)],
         }
     ]
 };
@@ -117,13 +118,16 @@ options: {
       x: {
         display: true,
         ticks: {
+            // min: 1,
+            // max: 20,
+            // fixedStepSize: 1,
             font: {
                 size: 18
             }
         },
         title: {
           display: true,
-          text: 'Time',
+          text: 'Time (years)',
             color: '#023020',
           font: {
             lineHeight: 2.0,
@@ -141,7 +145,7 @@ options: {
           },
         title: {
           display: true,
-          text: 'Value',
+          text: 'Value ($)',
             color: '#023020',
           font: {
             // lineHeight: 2.0,

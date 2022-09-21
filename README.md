@@ -9,7 +9,7 @@ In the data visualization, the user submits an amount they want to watch grow. T
 Functionality & MVPs
 In To Spend or Not to Spend, users will be able to:
  - enter an amount to watch
- - clear previous amount and select new amount 
+ - clear previous amount and enter new amount 
  - select points in the line graph and it will show time and new amount
  - zoom into the graph 
  
