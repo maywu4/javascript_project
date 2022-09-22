@@ -100,7 +100,7 @@ const data = {
             data: [Math.floor(userInput), Calculations.calcValueSP500(userInput, 1), Calculations.calcValueSP500(userInput, 3), Calculations.calcValueSP500(userInput, 5), Calculations.calcValueSP500(userInput, 10), Calculations.calcValueSP500(userInput, 15), Calculations.calcValueSP500(userInput, 20)],
         },
         {
-            label: 'Stocks(GOOGL, KO, MSFT, APPL, and META)',
+            label: 'Stocks(GOOGL, KO, MSFT, APPL, META)',
             backgroundColor: '#118C4F',
             borderColor: '#118C4F',
             data: [Math.floor(userInput), Calculations.calcValueStocks(userInput, 1), Calculations.calcValueStocks(userInput, 3), Calculations.calcValueStocks(userInput, 5), Calculations.calcValueStocks(userInput, 10), Calculations.calcValueStocks(userInput, 15),Calculations.calcValueStocks(userInput, 20)],

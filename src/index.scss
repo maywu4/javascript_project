@@ -6,12 +6,15 @@
     align-items: center;
     border-radius: 10px;
     height: 10vh;
+    border: black;
+    border-style: solid;
 }
 
 h1 {
     font-size: 40px;
     color: white;
-    font-family: 'Courier New', Courier, monospace;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 5px 5px 5px black;
 
 }
 
@@ -64,6 +67,8 @@ h3 {
     margin-bottom: 20px;
     border-radius: 20px;
     color: #023020;
+    border: black;
+    border-style: solid;
 }
 
 #userForm {
@@ -81,6 +86,8 @@ h3 {
     margin-bottom: 20px;
     border-radius: 20px;
     background-image: url(../photo-1568581357391-c71a1675ef93.avif);
+    border: black;
+    border-style: solid;
 }
 
 #input > h3 {
@@ -93,6 +100,8 @@ h3 {
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 20px;
+    border: black;
+    border-style: solid;
 }
 
 #root {
@@ -102,6 +111,7 @@ h3 {
     grid-row-end: 3;
     justify-self: stretch;
     padding: 25px;
+    
 }
 
 #stockimg {
@@ -109,11 +119,15 @@ h3 {
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 4;
+    
 }
 
 #stockphoto {
     border-radius: 20px;
-    margin-left: 35px;
+    margin-left: 15px;
+    border: black;
+    border-style: solid;
+
 }
 
 #giphy3 {
@@ -138,6 +152,8 @@ h3 {
     font-size: 22px;
     border-radius: 20px;
     max-height: 200px;
+    border: black;
+    border-style: solid;
 }
 
 #apps {
@@ -154,16 +170,26 @@ h3 {
     font-size: 22px;
     border-radius: 20px;
     max-height: 200px;
-    // margin-left: 5px;
+    border: black;
+    border-style: solid;
+    margin-left: 20px;
 }
 
 #appslist {
     list-style-type: none;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: flex-start;
 }
 
-li > a {
+button {
     font-size: 20px;
-    color: #023020;
+    color: #427a5b;
+    cursor: pointer;
+    text-align: center;
+    border-style: solid;
+    border-color: #023020;
 }
 
 #resourceslist {
