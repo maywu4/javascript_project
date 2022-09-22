@@ -19,7 +19,7 @@ In To Spend or Not to Spend, users will be able to:
  
  
  Overview
- ![Overview](image.png)
+ ![Overview](./imgs/image.png)
 
 
 
