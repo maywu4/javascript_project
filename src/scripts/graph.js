@@ -119,7 +119,7 @@ options: {
         display: true,
         ticks: {
             font: {
-                size: 18
+                size: 12
             }
         },
         title: {
@@ -129,7 +129,7 @@ options: {
           font: {
             lineHeight: 2.0,
             family: 'Times New Roman',
-            size: 32
+            size: 22
           }
         }
       },
@@ -137,7 +137,7 @@ options: {
         display: true,
           ticks: {
               font: {
-                  size: 18
+                  size: 12
               }
           },
         title: {
@@ -146,7 +146,7 @@ options: {
             color: '#023020',
           font: {
             family: 'Times New Roman',
-            size: 32
+            size: 22
           }
         }
       }
@@ -167,7 +167,7 @@ options: {
             font: {
                 lineHeight: 2.0,
                 family: 'Times New Roman',
-                size: 40
+                size: 30
               }
         }
     }, 
