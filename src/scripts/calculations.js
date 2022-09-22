@@ -1,4 +1,3 @@
-// import { at } from "core-js/core/string";
 
 export const calcValueDueToInflation= function (input, time) {
     //source for avg annual inflation rate: https://www.worlddata.info/america/usa/inflation-rates.php
@@ -54,7 +53,6 @@ export const calcValueStocks = function (input, time) {
     let aTotalArray = [];
     let mtaTotal = 0; 
     let mtaTotalArray = [];
-    // let total = 0 //gTotal + cTotal + mftTotal + aTotal + mtaTotal;
 
 
  
@@ -79,7 +77,6 @@ export const calcValueStocks = function (input, time) {
                     }
                 }
 
-                //return gTotalArray;
                 break;
 
             case 1:
@@ -141,7 +138,6 @@ export const calcValueStocks = function (input, time) {
         }
 
     }
-    // return [gTotalArray, cTotalArray, mftTotalArray, aTotalArray, mtaTotalArray]
     const lastIdx = time-1;
     let total = gTotalArray[lastIdx] + cTotalArray[lastIdx] + mftTotalArray[lastIdx] + aTotalArray[lastIdx] + mtaTotalArray[lastIdx];
     return Math.round(total*100)/100;

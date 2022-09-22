@@ -118,9 +118,6 @@ options: {
       x: {
         display: true,
         ticks: {
-            // min: 1,
-            // max: 20,
-            // fixedStepSize: 1,
             font: {
                 size: 18
             }
@@ -148,7 +145,6 @@ options: {
           text: 'Value ($)',
             color: '#023020',
           font: {
-            // lineHeight: 2.0,
             family: 'Times New Roman',
             size: 32
           }
