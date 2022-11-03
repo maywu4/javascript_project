@@ -23,13 +23,13 @@ In the data visualization, the user enters an amount they want to watch grow. Th
 
 
 
- Technologies, Libraries, APIs
+ # Technologies, Libraries, APIs
  - Chart.js to display the data visualization
  - Webpack and Babel to package JS code
 
 
 
-Code Highlights
+# Code Highlights
 
 ```javascript 
 //javascript_project/src/scripts/calculations.js
