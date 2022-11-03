@@ -19,7 +19,7 @@ In the data visualization, the user enters an amount they want to watch grow. Th
  
  
  Overview
- ![Overview](./imgs/image.png)
+ ![ProjectImage](./imgs/javascript_project_pic.png)
 
 
 
@@ -29,11 +29,30 @@ In the data visualization, the user enters an amount they want to watch grow. Th
 
 
 
-Implementation Timeline
-- Friday: set up skeleton and server, create functions to calculate projections for time value of money, savings, treasury bonds, CDs, and stock investments based on available data
-- Monday: research Chart.js library and read documentation on how to use its features to display data. Implement Chart.js to display a graph consisting of different lines related to each different type of investment. Ensuring it has title, row label, column label, graph key(legend) and can 'click' on data points. 
-- Tuesday: Update index.html; add instructions, place for user input, Github and Linkedin buttons, and resources(links) under the graph for users to find more information about each investment type.
-- Wednesday: focus on css and user interface experience 
+Code Highlights
+
+```javascript 
+//javascript_project/src/scripts/calculations.js
+
+export const calcValueCd = function (input, time) {
+    //source for avg one-year CD APY: https://www.bankrate.com/banking/cds/historical-cd-interest-rates/
+    let output = (input)*(1+(.0052/1))**(1*time);
+    return Math.round(output*100)/100;
+}
 
 
+export const calcValueTreasuryBond = function (input, time) {
+    //source for 20yr U.S. Treasury Bonds interest rate: https://www.treasurydirect.gov/instit/annceresult/annceresult.htm 
+    let output = (input)*(1+(.03375/1))**(1*time);
+    return Math.round(output*100)/100;
+}
+
+export const calcValueSP500 = function (input, time) {
+    //source for S&P 500 annual growth rate: https://www.fool.com/investing/how-to-invest/index-funds/average-return/
+    let output = (input)*(1+(.1070/1))**(1*time);
+    return Math.round(output*100)/100;
+
+```
+
+The code above are the functions to manually calculate the future value of a current investment based on investment types( Certificate of Deposits, Treasury Bonds, and S&P 500 ETFs). These calculations are based on future projected growth of investments from external resources. 
 
