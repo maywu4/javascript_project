@@ -19,7 +19,7 @@ In the data visualization, the user enters an amount they want to watch grow. Th
  
  
  Overview
- ![ProjectImage](./imgs/javascript_project_pic.png)
+ ![ProjectImage](./imgs/javascript_project.png)
 
 
 
