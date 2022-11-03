@@ -1,4 +1,4 @@
-Background
+# Background
 
 Have you ever wondered what if you saved or invested the $100 rather than spending it on something you don't need? This project is a data visualization of how that amount will grow if you decide to invest it rather than spend it now.
 
@@ -6,16 +6,16 @@ In the data visualization, the user enters an amount they want to watch grow. Th
 
 
 
-Functionality & MVPs
-In To Spend or Not to Spend, users will be able to:
- - enter an amount to watch
- - select points in the line graph and it will show time and new amount
- - unselect a specific investment type in the graph legend to hide the line
+# Functionality & MVPs
+## In To Spend or Not to Spend, users can:
+ * enter an amount to watch grow
+ * select points in the line graph and it will show time passed and new amount
+ * unselect a specific investment type in the graph legend to hide the line
  
- In addition, this project will include:
- - instructions on how to use the project
- - links of resources to find more information about a specific investment type
- - links to financial investment companies to learn more
+## In addition, this project will include:
+ * instructions on how to use the project
+ * links of resources to find more information about a specific investment type
+ * links to financial investment companies to learn more
  
  
  Overview
