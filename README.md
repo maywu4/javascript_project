@@ -1,6 +1,6 @@
 # Background
 
-Have you ever wondered what if you saved or invested the $100 rather than spending it on something you don't need? This project is a data visualization of how that amount will grow if you decide to invest it rather than spend it now.
+Have you ever wondered what if you saved or invested the $100 rather than spending it on something you don't need? [Monetary Gain on the Brain](https://maywu4.github.io/javascript_project/ "Monetary Gain on the Brain") is a data visualization of how that amount will grow if you decide to invest it rather than spend it now.
 
 In the data visualization, the user enters an amount they want to watch grow. Then, the graph will display lines representing each kind of investment. Using the calculated future value of money due to inflation as the base, users can compare different investment types and their growth in the long run. The types of investments being compared are: savings account, U.S. Treasury bonds, CDs(Certificate of Desposit), S&P 500 ETFs, and basket of stocks(Alphbet Inc., The Coca-Cola Company, Microsoft Corp., Apple Inc., and Meta Platforms Inc.).  
 
