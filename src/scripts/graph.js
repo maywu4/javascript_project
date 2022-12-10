@@ -129,7 +129,7 @@ options: {
           font: {
             lineHeight: 2.0,
             family: 'Times New Roman',
-            size: 22
+            size: 18
           }
         }
       },
@@ -146,17 +146,17 @@ options: {
             color: '#023020',
           font: {
             family: 'Times New Roman',
-            size: 22
+            size: 18
           }
         }
       }
     },
     plugins: {
         legend: {
-            position: 'right',
+            position: 'bottom',
             labels: {
                 font: {
-                    size: 15
+                    size: 10
                 }
             }
         },
@@ -167,7 +167,7 @@ options: {
             font: {
                 lineHeight: 2.0,
                 family: 'Times New Roman',
-                size: 30
+                size: 25
               }
         }
     }, 

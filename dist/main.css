@@ -1,32 +1,37 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
+body {
+  margin: 0.15vw;
+}
+
 #heading {
   background-color: #006400;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   border-radius: 10px;
   height: 10vh;
   border: black;
   border-style: solid;
+  width: 99.5vw;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 32px;
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-shadow: 5px 5px 5px black;
   display: inline-block;
-  width: 700px;
+  min-width: 50vw;
 }
 
 nav > img {
   background-color: lightgreen;
   border-radius: 50px;
   margin-right: 15px;
-  width: 8vh;
-  height: 4vw;
+  width: 50px;
+  height: 50px;
   margin-left: 1vw;
 }
 
@@ -43,30 +48,31 @@ nav > img {
 }
 
 .links > li {
-  padding: 25px;
+  margin: 10px;
 }
 
-#navbar {
-  width: 100vw;
+.links > li:first-child {
+  margin: 10px 0 10px 0px;
 }
 
 .container {
   display: inline-grid;
-  grid-template-columns: 1fr 20px 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 0.5fr;
+  grid-template-columns: 24vw 1vw 24vw 25vw 24vw;
+  grid-template-rows: 35vh 30vh 22vh;
   justify-items: flex-start;
   height: 90vh;
+  width: 100vw;
 }
 
 #instructions {
   margin-top: 10px;
   margin-bottom: 20px;
-  margin-left: 20px;
+  margin-left: 0;
   margin-right: 20px;
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 20px;
   color: #023020;
   margin-bottom: 0;
   margin-top: 0;
@@ -78,8 +84,8 @@ h3 {
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
-  font-size: 2vh;
-  padding: 20px;
+  font-size: 1.9vh;
+  padding: 10px;
   background-color: rgb(138, 198, 165);
   margin-top: 20px;
   margin-bottom: 20px;
@@ -136,13 +142,16 @@ h3 {
   grid-column-end: 4;
   grid-row-start: 3;
   grid-row-end: 4;
+  width: 100%;
+  height: 100%;
 }
 
 #stockphoto {
   border-radius: 20px;
-  margin-left: 15px;
   border: black;
   border-style: solid;
+  width: 100%;
+  height: 100%;
 }
 
 #giphy3 {
@@ -150,6 +159,13 @@ h3 {
   grid-column-end: 6;
   grid-row-start: 3;
   grid-row-end: 4;
+  width: 24vw;
+  height: 22vh;
+}
+
+#giphy3 iframe {
+  width: 100%;
+  height: 100%;
 }
 
 #resources {
@@ -157,17 +173,21 @@ h3 {
   grid-column-end: 2;
   grid-row-start: 3;
   grid-row-end: 4;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
   background-color: #427a5b;
   justify-self: stretch;
-  font-size: 2vh;
+  font-size: 1.75vh;
   border-radius: 20px;
   max-height: 200px;
   border: black;
   border-style: solid;
+}
+
+#resources h3 {
+  margin-bottom: 5px;
 }
 
 a:active {
@@ -185,8 +205,8 @@ a:visited {
   grid-row-end: 4;
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: #68A357;
   justify-self: stretch;
   font-size: 22px;
@@ -203,6 +223,14 @@ a:visited {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   justify-items: flex-start;
+  width: 100%;
+  height: 80%;
+}
+
+#appslist a {
+  width: 80%;
+  height: 100%;
+  margin: 0.5vw;
 }
 
 button {
@@ -212,10 +240,10 @@ button {
   text-align: center;
   border-style: solid;
   border-color: #023020;
-  margin: 10px;
+  margin: 5px;
   border-radius: 10px;
-  width: 170px;
-  height: 55px;
+  width: 100%;
+  height: 5vh;
 }
 
 button:hover {
@@ -223,12 +251,21 @@ button:hover {
 }
 
 #appslist img {
-  max-width: 155px;
-  max-height: 50px;
+  max-width: 8vw;
+  max-height: 5vh;
 }
 
 #resourceslist {
   list-style-type: none;
   padding-left: 0;
   margin: 0;
+}
+
+#resourceslist li {
+  display: flex;
+}
+
+#resourceslist li a {
+  align-self: center;
+  text-decoration: none;
 }
