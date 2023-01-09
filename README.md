@@ -7,7 +7,7 @@ In the data visualization, the user enters an amount they want to watch grow. Th
 
 
 # Functionality & MVPs
-## In To Spend or Not to Spend, users can:
+## In Monetary Gain on the Brain, users can:
  * enter an amount to watch grow
  * select points in the line graph and it will show time passed and new amount
  * unselect a specific investment type in the graph legend to hide the line
@@ -54,5 +54,5 @@ export const calcValueSP500 = function (input, time) {
 
 ```
 
-The code above are the functions to manually calculate the future value of a current investment based on investment types( Certificate of Deposits, Treasury Bonds, and S&P 500 ETFs). These calculations are based on future projected growth of investments from external resources. 
+The code above are the functions to manually calculate the future value of a current investment based on investment types(Certificate of Deposits, Treasury Bonds, and S&P 500 ETFs). These calculations are based on future projected growth of investments from external resources. 
 
