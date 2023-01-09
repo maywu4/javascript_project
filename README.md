@@ -52,6 +52,7 @@ export const calcValueSP500 = function (input, time) {
     let output = (input)*(1+(.1070/1))**(1*time);
     return Math.round(output*100)/100;
 
+}
 ```
 
 The code above are the functions to manually calculate the future value of a current investment based on investment types(Certificate of Deposits, Treasury Bonds, and S&P 500 ETFs). These calculations are based on future projected growth of investments from external resources. 
